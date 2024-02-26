@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 4</title>
+</head>
+
+<body>
+
+	<h2>Задача 4</h2>
+	<p>
+		З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником,
+		пенсіонером).
+	</p>
+	<button id="submitButton">Відповідь</button>
+
+	<script>
+		document.getElementById('submitButton').addEventListener('click', function () {
+			let userAge = parseInt(prompt('Скільки Вам років?'));
+			let result
+			if (userAge < 1 || userAge > 150) {
+				result = 'Некоректний вік'
+			} else if (userAge <= 7) {
+				result = 'Дитина у садочку'
+			} else if (userAge <= 17) {
+				result = 'Дитина у школі'
+			} else if (userAge <= 22) {
+				result = 'Студент'
+			} else if (userAge <= 65) {
+				result = 'Працівник'
+			}
+			else result = 'Пенсіонер'
+			document.write(result)
+		});
+	</script>
+</body>
+
+</html>
